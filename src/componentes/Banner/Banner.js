@@ -1,6 +1,6 @@
 import './Banner.css'
 
-function Banner() {
+export const Banner = () => {
     // ISSO É JSX - COMO O REACT TRABALHA COM A PARTE VISUAL... PARECE HTML MAS NÃO É, ENTENDE O QUE ACONTECE AQUI E TRANSFORMA 
     return (
         //CLASSNAME É A MESMA COISA QUE CLASS NO CSS
@@ -10,5 +10,3 @@ function Banner() {
         
     )
 }
-
-export default Banner
