@@ -24,3 +24,6 @@ ls -la - listar o que tem na pasta
 npm = rodar coisas locais
 npx = script de forma remota/não é meu ambiente local
 
+
+.map retorna um novo array de elementos, baseado no que retornamos na função passada por callback.
+
