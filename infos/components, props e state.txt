@@ -1,0 +1,16 @@
+HOOKS = funções que podemos conectar e acessar uma especialidade especifica... USE....
+
+UseState 
+    O React useState Hook nos permite rastrear o estado em um componente de função.
+    O estado geralmente se refere a dados ou propriedades que precisam ser rastreados em um aplicativo.
+    Inicializamos nosso estado chamando useState em nosso componente de função.
+    - O estado atual.
+    - Uma função que atualiza o estado.
+
+Sempre que queremos que o componente reaja a alguma alteração no valor de uma variável e se renderize novamente, precisamos indicar isto utilizando o useState. Do contrário, o valor vai ser alterado mas o DOM não será atualizado.
+
+Components = Trecho de códigos da sua aplicação que você pode isolar, incapsular,  reaproveitar ou não
+
+Props = Atributos que você recebe, partes dinâmica do elemento
+
+State = Forma de armazenar valor dentro de um componente, passar informações

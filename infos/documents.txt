@@ -1,0 +1,36 @@
+DOM - DOCUMENT OBJECT MODEL
+    O Document Object Model (DOM) é a representação de dados dos objetos que compõem a estrutura e o conteúdo de um documento na web
+    é uma interface de programação para documentos Web. Representa a página para que os programas possam alterar a estrutura, o estilo e o conteúdo do documento. O DOM representa o documento como nós e objectos; desta forma, as linguagens de programação podem interagir com a página.
+    Uma página Web é um documento que pode ser apresentado na janela do browser ou como fonte HTML. Em ambos os casos, é o mesmo documento, mas a representação do Modelo de Objectos de Documento (DOM) permite a sua manipulação. Sendo uma representação orientada para objectos da página Web, pode ser modificada com uma linguagem de script como o JavaScript.
+
+----------- 
+
+TARGET:
+A propriedade target retorna o elemento onde ocorreu o evento.
+A propriedade de destino é somente leitura.
+A propriedade target retorna o elemento no qual o evento ocorreu, em oposição à propriedade currentTarget, que retorna o elemento cujo ouvinte de eventos acionou o evento.
+
+-----------
+
+EVENTO:
+Eventos são ações ou ocorrências que acontecem no sistema que estamos desenvolvendo, no qual este te alerta sobre essas ações para que você possa responder de alguma forma, se desejado. Por exemplo, se o usuário clica em um botão numa pagina web, você pode querer responder a esta ação mostrando na tela uma caixa de informações. 
+Existem vários tipos diferentes de eventos que podem vir a acontecer, por exemplo:
+
+onBlur	remove o foco do elemento
+onChange	muda o valor do elemento
+onClick	o elemento é clicado pelo usuário
+onFocus	o elemento é focado
+onKeyPress	o usuário pressiona uma tecla sobre o elemento
+onLoad	carrega o elemento por completo
+onMouseOver	define ação quando o usuário passa o mouse sobre o elemento
+onMouseOut	define ação quando o usuário retira o mouse sobre o elemento
+onSubmit	define ação ao enviar um formulário
+
+-----------
+
+UseState:
+O React useState Hook nos permite rastrear o estado em um componente de função.
+O estado geralmente se refere a dados ou propriedades que precisam ser rastreados em um aplicativo.
+Inicializamos nosso estado chamando useState em nosso componente de função.
+O estado atual.
+Uma função que atualiza o estado.

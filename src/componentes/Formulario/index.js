@@ -1,34 +1,75 @@
+import { useState } from 'react'
 import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
-    const sexo = [
+    const sexos = [
         'Macho',
         'Fêmea'
     ]
 
+    const [nome, setNome] = useState('')
+    const [idade, setIdade] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [sexo, setSexo] = useState('')
+
+
     const aoSalvar = (evento) => {
         evento.preventDefault() //Prevenir o comportamento padrão, definir controle da situação //Mantem a impressão no console
-        console.log('Form foi submetido')
+        props.aoColaboradorCadastrado({
+            nome,
+            idade,
+            imagem,
+            sexo
+        })
+        
     }
-
 
 
     return (
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
+
                 <h2>Preencha os dados para criar o card do nosso novo aumigo</h2>
-                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite o nome do pet" />
-                <CampoTexto obrigatorio={true} label="Idade"
-                 placeholder="Digite a idade do pet" />
-                <CampoTexto obrigatorio={true} label="Imagem" placeholder="Digite o endereço da imagem" />
-                <ListaSuspensa obrigatorio={true} label="Sexo" itens={sexo} />
+                
+                <CampoTexto 
+                    obrigatorio={true} 
+                    label="Nome" 
+                    placeholder="Digite o nome do pet" 
+                    valor={nome} 
+                    aoAlterado={valor => setNome(valor)}/>
+
+                <CampoTexto
+                    obrigatorio={true} 
+                    label="Idade"
+                    placeholder="Digite a idade do pet"
+                    valor={idade}
+                    aoAlterado={valor => setIdade(valor)}
+                />
+
+                <CampoTexto 
+                    obrigatorio={true} 
+                    label="Imagem" 
+                    placeholder="Digite o endereço da imagem"
+                    valor = {imagem}
+                    aoAlterado={valor => setImagem(valor)}
+                />
+
+                <ListaSuspensa 
+                    obrigatorio={true} 
+                    label="Sexo" 
+                    itens={sexos}
+                    valor = {sexo}
+                    aoAlterado={valor => setSexo(valor)} 
+                />
+
                 <Botao>
                     Criar Card
                 </Botao>
+
             </form>
         </section>
     )
