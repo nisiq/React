@@ -11,10 +11,17 @@ const Formulario = (props) => {
         'Fêmea'
     ]
 
+    const portes = [
+        'Pequeno',
+        'Médio',
+        'Grande'
+    ]
+
     const [nome, setNome] = useState('')
     const [idade, setIdade] = useState('')
     const [imagem, setImagem] = useState('')
     const [sexo, setSexo] = useState('')
+    const [porte, setPorte] = useState('')
 
 
     const aoSalvar = (evento) => {
@@ -23,7 +30,8 @@ const Formulario = (props) => {
             nome,
             idade,
             imagem,
-            sexo
+            sexo,
+            porte
         })
         
     }
@@ -51,7 +59,7 @@ const Formulario = (props) => {
                 />
 
                 <CampoTexto 
-                    obrigatorio={true} 
+                    obrigatorio={true}
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"
                     valor = {imagem}
@@ -60,10 +68,18 @@ const Formulario = (props) => {
 
                 <ListaSuspensa 
                     obrigatorio={true} 
-                    label="Sexo" 
+                    label="Sexo"
                     itens={sexos}
                     valor = {sexo}
                     aoAlterado={valor => setSexo(valor)} 
+                />
+
+                <ListaSuspensa 
+                    obrigatorio={true} 
+                    label="Porte" 
+                    itens={portes}
+                    valor = {porte}
+                    aoAlterado={valor => setPorte(valor)} 
                 />
 
                 <Botao>

@@ -16,7 +16,7 @@ const CampoTexto = (props) => {
                 {props.label}
             </label>
 
-            <input value={props.valor}  onChange={aoDigitado} required={props.obrigatorio} type={props.typeInput ? props.typeInput : 'text'} placeholder={placeholderModificada}></input>
+            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} type={props.typeInput ? props.typeInput : 'text'} placeholder={placeholderModificada}></input>
         </div>
     )
 }
