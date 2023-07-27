@@ -9,7 +9,7 @@ function App() {
   const portes = [
     {
       nome: 'Pequeno',
-      corPrimaria: '#57c278;',
+      corPrimaria: '#57c278',
       corSecundaria: '#D9F7E9'
     },
     {
@@ -36,8 +36,15 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado= {colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {portes.map(porte => <Time key={porte.nome} nome={porte.nome} corPrimaria={porte.corPrimaria} corSecundaria={porte.corSecundaria} />)}
+      <Formulario nomeDosPortes={portes.map(porte => porte.nome)} aoColaboradorCadastrado= {colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      {portes.map(porte => <Time 
+      key={porte.nome} 
+      nome={porte.nome} 
+      corPrimaria={porte.corPrimaria} 
+      corSecundaria={porte.corSecundaria}
+      colaboradores={colaboradores}
+
+      />)}
       
 
     </div>

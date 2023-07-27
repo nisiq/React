@@ -11,11 +11,6 @@ const Formulario = (props) => {
         'Fêmea'
     ]
 
-    const portes = [
-        'Pequeno',
-        'Médio',
-        'Grande'
-    ]
 
     const [nome, setNome] = useState('')
     const [idade, setIdade] = useState('')
@@ -77,7 +72,7 @@ const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Porte" 
-                    itens={portes}
+                    itens={props.nomeDosPortes}
                     valor = {porte}
                     aoAlterado={valor => setPorte(valor)} 
                 />
