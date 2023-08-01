@@ -6,7 +6,7 @@ import Time from './componentes/Time';
 function App() {
 
 
-  const portes = [
+  const times = [
     {
       nome: 'Pequeno',
       corPrimaria: '#57c278',
@@ -36,16 +36,15 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario nomeDosPortes={portes.map(porte => porte.nome)} aoColaboradorCadastrado= {colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {portes.map(porte => <Time 
-      key={porte.nome} 
-      nome={porte.nome} 
-      corPrimaria={porte.corPrimaria} 
-      corSecundaria={porte.corSecundaria}
-      colaboradores={colaboradores}
-
-      />)}
+      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado= {colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
       
+      {times.map(time => <Time 
+        key={time.nome} 
+        nome={time.nome} 
+        corPrimaria={time.corPrimaria} 
+        corSecundaria={time.corSecundaria}
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}
 
     </div>
   );

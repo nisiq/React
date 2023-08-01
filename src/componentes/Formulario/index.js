@@ -16,7 +16,7 @@ const Formulario = (props) => {
     const [idade, setIdade] = useState('')
     const [imagem, setImagem] = useState('')
     const [sexo, setSexo] = useState('')
-    const [porte, setPorte] = useState('')
+    const [time, setTime] = useState('')
 
 
     const aoSalvar = (evento) => {
@@ -26,8 +26,12 @@ const Formulario = (props) => {
             idade,
             imagem,
             sexo,
-            porte
+            time
         })
+        setNome('')
+        setIdade('')
+        setImagem('')
+        setTime('')
         
     }
 
@@ -72,9 +76,9 @@ const Formulario = (props) => {
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Porte" 
-                    itens={props.nomeDosPortes}
-                    valor = {porte}
-                    aoAlterado={valor => setPorte(valor)} 
+                    itens={props.times}
+                    valor = {time}
+                    aoAlterado={valor => setTime(valor)} 
                 />
 
                 <Botao>
